@@ -1,0 +1,30 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    
+}
+
+.model_list {
+    
+    width: 100vw;
+    height: auto;
+    
+}
+
+.model_list a img {
+    
+    width: 85vw;
+    height: auto;
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
+    border: 2px solid black;
+    
+}
+
+h1 {
+    
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    
+}
