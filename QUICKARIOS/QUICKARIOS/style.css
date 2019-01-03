@@ -1,0 +1,89 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: #fffafa;
+}
+
+   .model_list {
+    
+    width: 100vw;
+    height: auto;
+}
+
+.model_list a img {
+    
+    width: 40vw;
+    height: auto;
+    border: 2px solid black; 
+
+}
+
+.holder {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-left: -2vw;
+    
+}
+
+h1 {
+    
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2vw;
+    
+}
+
+
+h2 {
+    
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2vw;
+    
+}
+
+.screen_1_cont {
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+} 
+
+.ms-nav-link {
+    
+    font-family: 'Roboto Condensed', sans-serif;
+    display: inline;
+    font-size: 3vw;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black; 
+    padding: 1.5vw;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.screen_1_img {
+    
+    width: 30vw;
+    height: auto;
+    margin-left: 35vw;
+    margin-right: 35vw;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AR Library</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAOn74Wc4uhxeVMhUkbUQ0IjvOv0G2JFkA",
+            authDomain: "architect-app-9f67f.firebaseapp.com",
+            databaseURL: "https://architect-app-9f67f.firebaseio.com",
+            projectId: "architect-app-9f67f",
+            storageBucket: "architect-app-9f67f.appspot.com",
+            messagingSenderId: "236956434560"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 600px)" href="mobile.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-device-width: 601px)" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="multi-screen-css.css" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+        <script type="text/javascript" src="multi-screen.js"></script>
+        <script type="text/javascript">$(document).ready(function() { MultiScreen.init(); });</script>
+    <script src="firebase.js"></script>
+</head>
+
+<body>
+        <div id="screen1" class="ms-container ms-default screen1">
+            <div class="screen_1_cont">
+                <img src="arkitektlogo.png" class="screen_1_img">
+                <h1>ARKITEKT.UI</h1>
+        <div class="enter_button">
+        <h2 class="ms-nav-link" data-ms-target="screen2" data-ms-animation="fadeleft" data-ms-vertical-distance="0" href="javascript:void(0)">ENTER</h2>
+            </div>
+            </div>
+    </div>
+    
+        <div id="screen2" class="ms-container">
+             <h1>SELECT MODEL</h1>
+    <div class="model_list">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script>
+    var rootRef = firebase.database().ref().child("Models");
+
+rootRef.on("child_added", snap => {
+    
+  var model = snap.child("Model").val();
+  var model_image = snap.child("Model_Image").val();
+    var model_name = snap.child("Model_Name").val();
+    var ar = ('ar');
+    var holder = ('holder');
+
+$(".model_list").append("<div class=" + holder + ">" + "<a href=" + model +" rel=" + ar + ">" +
+                          "<img src=" + model_image + ">" +
+                        "</a>" + "<h2>" + model_name + "</h2>" + "</div>");
+});
+
+        </script>
+
+    </div>
+
+
+    </div>
+
+</body>
+
+</html
